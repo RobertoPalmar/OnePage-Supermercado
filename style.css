@@ -1,0 +1,404 @@
+html * {
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Louis George';
+  src: url('fuentes/Louis George/Louis George Cafe Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Made Tommy';
+  src: url('fuentes/Made Tommy/MADE TOMMY Regular_PERSONAL USE.otf');
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 2rem;
+  height: 8rem;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 0 .5rem #777;
+  box-sizing: border-box;
+}
+
+.Header__Link{
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.Header__Logo{
+  width: 7rem;
+  object-fit: contain;
+}
+
+.Header__NameBox{
+  padding-top: 1rem;
+  flex-grow: 1;
+}
+
+.Header__NameBox *{
+  line-height: 2rem;
+  color: black;
+}
+
+.Header__Name{
+  font-family: 'Made Tommy';
+  font-size: 2.5rem;
+}
+
+.Header__SubName{
+  font-family: 'Louis George';
+}
+
+.Nav__Menu{
+  display: flex;
+  align-items: center;
+}
+
+.Nav__Item{
+  display: block;
+}
+
+.Nav__Link{
+  padding: 2.8rem 1rem;
+  color: black;
+  font-size: 1.2rem;
+  font-family: 'Made Tommy';
+  transition: border .3s;
+  transition-timing-function: ease-out;
+}
+
+.Nav__Link:hover{
+  font-weight: bold;
+  border-bottom: .5rem solid #ff8020;
+  background-color: rgba(238, 238, 238, 0.438);
+}
+
+.Nav__Link.Color, .Section__Button{
+  display: block;
+  padding: 1rem;
+  margin-left: .5rem;
+  border-radius: .3rem;
+  background-image: linear-gradient(to right top, #ff00a8, #ff6c32, #ffe300);
+  color: white;
+  transition: transform .2s ease-in;
+}
+
+.Nav__Link.Color:hover, .Section__Button:hover{
+  transform: scale(1.05);
+  border: none;
+}
+
+.Section__Button{
+  font-family: 'Louis George';
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  text-align: center;
+  width: 8rem;
+}
+
+.Section {
+  display: grid;
+  margin: 1.5rem 0;
+  padding: 1rem 6rem;
+  border-radius: .5rem;
+}
+
+.Section.TwoColumns {grid-template-columns: repeat(2, 1fr);}
+.Section.ThreeColumns {grid-template-columns: repeat(3, 1fr);}
+
+.Section__Front{
+  min-height: 25rem;
+  background-image: url('multimedia/Portada.jpg');
+  background-color: rgba(0, 0, 0, 0.10);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center -6rem;
+  border-radius: .3rem;
+  transition: transform .3s;
+  color: white;
+}
+
+.Section__Column, .Section__Front{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Section__Column.Up{
+  box-shadow: 0 0 .5rem rgba(119, 119, 119, 0.63);
+  border-radius: .3rem;
+  margin: .8rem;
+  transition: transform .3s, outline .3s;
+}
+
+.Section__Column.Up:hover{
+  transform: translateY(-.3rem) scale(1.03);
+  /* box-shadow: 0 0 .5rem #555; */
+  outline: .2rem solid #ff8020;
+}
+
+.SpanV3{grid-column: span 3;}
+.SpanV2{grid-row: span 2;}
+.SpanH2{grid-column: span 2;}
+.SpanH3{grid-column: span 3;}
+
+.Section__Img {
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: .3rem;
+  margin: 1rem .2rem;
+}
+
+.Section__Img.Vertical{
+  height: 28rem;
+}
+
+.Section__Title {
+  font-family: 'Louis George', sans-serif;
+  font-size: 3.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.Section__Title.Color{
+  background: linear-gradient(to right top, #ff00a8, #ff6c32, #ffe300);
+  width: max-content;
+  padding: 0 1rem .5rem;
+  margin: .2rem 0;
+  border-radius: .3rem;
+}
+
+.Section__SubTitle{
+  font-family: 'Made Tommy';
+  font-size: 2rem;
+  margin: .5rem 0;
+  text-align: center;
+}
+
+.Section__Text, .Shop__Name, .Shop__Price{
+  font-family: 'Louis George', sans-serif;
+  font-size: 1.6rem;
+  margin: .5rem 0;
+  text-align: center;
+}
+
+.Right {text-align: right;}
+.Left {text-align: left;}
+.Alter {font-family: 'Made Tommy';}
+
+.Section__Shop{
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(5, minmax(8rem,1fr));
+  grid-auto-rows: 18rem;
+  margin: 1rem;
+}
+
+.Shop__Item{
+  border-radius: .3rem;
+  box-shadow: 0 0 .5rem rgba(119, 119, 119, 0.87);
+  cursor: pointer;
+  transition: transform .3s, box-shadow .3s;
+  color: black;
+}
+
+.Shop__Item:hover{
+  transform: translateY(-.3rem) scale(1.03);
+  box-shadow: 0 0 .5rem #555;
+}
+
+.Shop__Img{
+  width: 100%;
+  height: 50%;
+  border-radius: .3rem;
+  object-fit: contain;
+}
+
+.Shop__Price{
+  font-weight: bold;
+}
+
+.Shop__Price.Color{
+  color:#ff6c32;
+  font-size: 2rem;
+}
+
+.Modal{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.329);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+
+#Combo1:target, #Combo2:target, #Anexar:target, #Carrito:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.Modal__Content{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+  background: white;
+  color: black;
+  border-radius: .3rem;
+  width: 30rem;
+  height: 20rem;
+  padding: 1rem;
+}
+
+.Modal__Content.Vertical{
+  height: 30rem;
+}
+
+.Modal__List{
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+.Section__Form, .Form__Section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Form__Section{
+  padding: .2rem .5rem;
+  width: 80%;
+  margin: auto
+}
+
+.Form__Label{
+  margin-bottom: .5rem;
+  font-size: 1.3rem;
+  font-family: 'Louis George', sans-serif;
+  font-size: 1.4rem;
+}
+
+.Form__Input{
+  font-size: 1.25rem;
+  outline: none;
+  padding: .3rem;
+  font-family: 'Louis George', sans-serif;
+  font-size: 1.4rem;
+}
+
+.Form__Button{
+  font-family: 'Louis George', sans-serif;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+  width: 10rem;
+  height: 2.8rem;
+  margin: 1rem auto;
+  background-image: linear-gradient(to right top, #ff00a8, #ff6c32, #ffe300);
+  color: white;
+  transition: transform .2s, background-image .2s ease-in;
+}
+
+.Form__Button:hover{
+  transform: scale(1.05);
+}
+
+textarea.Form__Input{
+  resize: none; 
+  width: calc(100% - .6rem);
+  height: 5rem;
+}
+
+.Footer{
+  box-sizing: border-box;
+  font-family: 'Louis George', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgb(66, 66, 66);
+  color: white;
+}
+
+.Footer__Text{
+  font-size: 1.1rem;
+}
+
+.Footer__Icons{
+  display: flex;
+  justify-content: space-evenly;
+  margin: .5rem;
+}
+
+.Footer__Icons{
+  font-size: 2rem;
+}
+
+.fa:hover {
+  opacity: 0.9;
+}
+
+.fa {
+  text-decoration: none;
+  margin: 1rem;
+  color: white;
+}
+
+hr{
+  display: block;
+  border-radius: .3rem;
+  margin: 2.5rem auto;
+  width: 85%;
+  height: .2rem;
+  background-color: #999;
+}
+
+.Ancla {
+  color: #ffffff;
+  width: 3rem;
+  height: 1.2rem;
+  background-image: linear-gradient(to right top, #ff00a8, #ff6c32, #ffe300);
+  border-radius: .3rem;
+  padding: 1rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  transition: transform .3s;
+  z-index: 100;
+  font-family: 'Louis George', sans-serif;
+}
+
+.Ancla:hover {
+  transform: translateY(-1rem);
+}
